@@ -1,0 +1,53 @@
+.tab-manager
+    display: flex
+    flex-direction: row
+    gap: 10px
+    padding: 10px
+    padding-top: 6px
+    overflow-x: scroll
+    width: calc(100vw - 300px)
+
+    li
+        width: 180px
+        min-width: 180px
+
+    .new-tab-btn
+        margin-right: 15px
+        list-style: none
+        height: 36px
+        width: 36px
+        max-width: 36px
+        min-width: 36px !important
+
+    > li > button
+        background-color: var(--color-secondary)
+        color: var(--color-accent)
+        height: 36px
+        width: 36px
+        padding: 0
+
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: all 0.3s
+
+        :hover
+            color: #f6f6f6
+
+.tab-manager::after
+    content: ""
+    width: 10px
+    height: 100%
+    position: absolute
+    left: 0
+    top: 0
+    z-index: 1
+    overflow: visible
+        // background: linear-gradient(
+        //     to left,
+        //     transparent 0px,
+        //     var(--color-primary) 10px
+        // );
+
+.tab-manager::-webkit-scrollbar
+    display: none

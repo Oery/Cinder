@@ -1,0 +1,94 @@
+.tab
+    padding-left: 9px
+    cursor: pointer
+    background: var(--color-secondary)
+    width: 180px
+    min-width: 180px
+    height: 36px
+    border-radius: 5px
+
+    display: flex
+    flex-direction: row
+    align-items: center
+    gap: 10px
+    position: relative
+
+    font-size: 12px
+    text-overflow: ellipsis
+    white-space: nowrap
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2)
+
+    color: #f6f6f6
+    &.active, svg
+        color: var(--color-accent)
+
+    // ::before
+    //     content: ""
+    //     width: 25%
+    //     height: 100%
+    //     position: absolute
+    //     right: 0
+    //     top: 0
+    //     background: black
+    //     background-clip: text
+        // background: linear-gradient(
+        //     to right,
+        //     transparent 0px,
+        //     var(--color-secondary) 20px
+        // )
+
+    p
+        text-overflow: ellipsis
+        max-width: 110px
+        filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.4))
+
+.tab > svg:first-of-type
+    min-width: 24px
+
+.tab > svg:last-of-type
+    position: absolute
+    cursor: pointer
+    color: #f6f6f6
+    right: 10px
+    background: none
+    transition: all 0.3s
+
+    :hover
+        color: var(--color-accent)
+
+.tab-open-anim
+    animation: tab-open 0.2s ease-in-out
+
+.tab-close-anim
+    animation: tab-close 0.2s ease-in-out
+
+.plus-anim-right
+    animation: plus-right 0.2s ease-in-out
+    overflow: visible
+
+@keyframes plus-right
+    from
+        transform: translateX(-180px)
+
+    to
+        transform: translateX(0)
+
+@keyframes tab-open
+    from
+        transform: translateY(100%)
+        width: 0
+        opacity: 0
+
+    to
+        transform: translateY(0)
+        width: 180px
+        opacity: 1
+
+@keyframes tab-close
+    from
+        transform: translateY(0)
+        opacity: 1
+
+    to
+        transform: translateY(100%)
+        opacity: 0

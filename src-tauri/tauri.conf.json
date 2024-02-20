@@ -1,0 +1,66 @@
+{
+    "build": {
+        "beforeDevCommand": "npm run dev",
+        "beforeBuildCommand": "npm run build",
+        "devPath": "http://localhost:1420",
+        "distDir": "../dist"
+    },
+    "package": {
+        "productName": "Cinder",
+        "version": "0.0.0"
+    },
+    "tauri": {
+        "allowlist": {
+            "all": false,
+            "shell": {
+                "all": false,
+                "open": true
+            },
+            "window": {
+                "all": false,
+                "close": true,
+                "hide": true,
+                "show": true,
+                "maximize": true,
+                "minimize": true,
+                "unmaximize": true,
+                "unminimize": true,
+                "startDragging": true,
+                "create": true
+            }
+        },
+        "windows": [
+            {
+                "titleBarStyle": "Overlay",
+                "hiddenTitle": true,
+                "decorations": false,
+                "fullscreen": false,
+                "resizable": true,
+                "title": "Cinder",
+                "width": 950,
+                "height": 600,
+                "transparent": true,
+                "center": true,
+                "focus": true,
+                "fileDropEnabled": false
+            }
+        ],
+        "security": {
+            "csp": null
+        },
+        "bundle": {
+            "active": true,
+            "targets": "all",
+            "identifier": "dev.oery.cinder",
+            "publisher": "Oery",
+            "shortDescription": "Cinder",
+            "icon": [
+                "icons/32x32.png",
+                "icons/128x128.png",
+                "icons/128x128@2x.png",
+                "icons/icon.icns",
+                "icons/icon.ico"
+            ]
+        }
+    }
+}

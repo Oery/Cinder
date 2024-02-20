@@ -1,0 +1,51 @@
+.container
+    padding-top: 10vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    text-align: center
+
+.error-box
+    position: absolute
+    width: 100vw
+    height: 100vh
+    background-color: #000000c0
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: background-color 0.3s ease-in-out
+    z-index: 200
+
+    *
+        padding: 0
+        margin: 0
+
+    button
+        background-color: var(--color-accent)
+        color: rgb(0, 0, 0)
+        border: none
+        padding: 10px 20px
+        border-radius: 5px
+        cursor: pointer
+        width: min-content
+
+    .container
+        background-color: rgb(20, 20, 20)
+        opacity: 100%
+        min-width: 300px
+        border-radius: 20px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        padding: 20px
+        gap: 20px
+        transform: translateY(0)
+        transition: all 0.3s ease-out
+
+    &.hidden
+        background-color: transparent
+
+        .container
+            transform: translateY(+100%)
+            opacity: 0

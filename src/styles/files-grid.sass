@@ -1,0 +1,80 @@
+.files-grid::-webkit-scrollbar
+    display: none
+
+.files-grid
+    padding: 0 10px
+    height: calc(100vh - 102px)
+    width: 100%
+    overflow-y: scroll
+
+    &.grid
+        display: flex
+        flex-wrap: wrap
+        flex-direction: row
+        justify-content: flex-start
+        align-content: flex-start
+        gap: 10px
+        padding: 10px
+
+        .file, .directory
+            aspect-ratio: 1 / 1
+            height: 80px
+            display: flex
+            flex-direction: column
+            align-items: center
+            text-align: center
+            text-overflow: ellipsis
+            word-wrap: break-word
+            margin: 0 5px
+
+    &.list
+        .file, .directory
+            margin: 0 5px
+            width: fit-content
+            min-width: 300px
+            text-overflow: ellipsis
+
+.selection
+    position: absolute
+    border: 2px solid #0059ff
+    background-color: #0059ff27
+    border-radius: 5px
+    z-index: 100
+    pointer-events: none
+
+.directory::before
+    content: "📁"
+    padding-right: 9px
+
+.file::before
+    padding-right: 5px
+    content: "📄"
+
+.file,
+.directory
+    cursor: pointer
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.4))
+
+.directory:hover,
+.file:hover,
+.selected
+    background-color: #0059ff27
+    border-radius: 5px
+
+.py::before,
+.pyc::before
+    padding-right: 5px
+    content: "🐍"
+
+.bat::before
+    padding-right: 5px
+    content: "🦇"
+
+.sh::before
+    padding-right: 5px
+    content: "🐚"
+
+.tsx::before,
+.jsx::before
+    content: "🔵"
+    padding-right: 5px

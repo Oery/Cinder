@@ -1,0 +1,129 @@
+:root
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif
+    font-size: 16px
+    line-height: 24px
+    font-weight: 400
+
+    color: #0f0f0f
+    background-color: #f6f6f6
+
+    font-synthesis: none
+    text-rendering: optimizeLegibility
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    -webkit-text-size-adjust: 100%
+    overflow: hidden
+
+    // --color-accent: #f8644a
+    // --color-accent-hover: #f6f6f6
+    // --color-primary: #111111
+    // --color-secondary: #191919
+
+    /* Acrylic version */
+    --color-accent: #80c1ff
+    --color-accent-hover: #f6f6f6
+    --color-primary: #11111179
+    --color-secondary: #0000003b
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    overflow: hidden
+    user-select: none
+
+html, body, #root
+    background: transparent !important
+
+#root
+    background-color: var(--color-secondary) !important
+
+h1
+    text-align: center
+
+h2
+    color: var(--color-accent)
+    margin-left: 21px
+    font-weight: 400
+    font-size: 16px
+
+h3
+    color: #f6f6f6
+    font-weight: 400
+    font-size: 12px
+    letter-spacing: 0.25px
+
+a
+    font-weight: 500
+    color: #646cff
+    text-decoration: inherit
+
+a:hover
+    color: #535bf2
+
+input
+    // width: calc(100% - 10px)
+    // margin: 5px
+    margin: 0
+    margin-bottom: 10px
+    padding: 10px 20px
+    border-radius: 5px
+    /* border: 1px solid var(--color-accent); */
+    /* border: 1px solid var(--color-secondary); */
+    height: 36px
+    flex-grow: 2
+
+input::selection
+    background-color: var(--color-accent)
+    color: black
+
+input,
+button
+    border-radius: 8px
+    border: 1px solid transparent
+    padding: 0.6em 1.2em
+    font-size: 1em
+    font-weight: 500
+    font-family: inherit
+    color: #0f0f0f
+    background-color: #ffffff
+    transition: border-color 0.25s
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2)
+    outline: none
+
+button
+    cursor: pointer
+
+button:active
+    border-color: #396cd8
+    background-color: #e8e8e8
+
+@media (prefers-color-scheme: dark)
+    :root
+        color: #f6f6f6
+        background-color: #111111
+
+    a:hover
+        color: #24c8db
+
+    input,
+    button
+        color: #ffffff71
+        background-color: var(--color-secondary)
+
+    button:active
+        background-color: #0f0f0f69
+
+main
+    display: flex
+    flex-direction: column
+    width: 100%
+    height: 100%
+    overflow: hidden
+
+    > header
+        display: flex
+        flex-direction: column
+        > div
+            display: flex
+            flex-direction: row

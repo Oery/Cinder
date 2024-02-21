@@ -26,6 +26,10 @@ export default function Tab({ tab }: { tab: Tab }) {
         setActiveTab(tab.id);
     };
 
+    const handleCloseButtonClick = () => {
+        closeTab(tab.id);
+    };
+
     const handleMiddleClick = (e: React.MouseEvent, id: string) => {
         if (e.button === 1) {
             closeTab(id);
@@ -89,7 +93,7 @@ export default function Tab({ tab }: { tab: Tab }) {
             >
                 {getIcon(tab.path, 24)}
                 <p>{t(nameMap[tab.name]) || t(tab.name) || t("USB Drive")}</p>
-                <X size={18} onClick={() => closeTab(tab.id)} />
+                <X size={18} onClick={handleCloseButtonClick} />
             </div>
         </Reorder.Item>
     );

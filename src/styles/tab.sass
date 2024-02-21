@@ -19,7 +19,10 @@
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2)
 
     color: #f6f6f6
-    &.active, svg
+    &.active
+        color: var(--color-accent)
+
+    svg
         color: var(--color-accent)
 
     // ::before
@@ -53,8 +56,8 @@
     background: none
     transition: all 0.3s
 
-    :hover
-        color: var(--color-accent)
+.tab > svg:last-of-type:hover
+    color: var(--color-accent)
 
 .tab-open-anim
     animation: tab-open 0.2s ease-in-out
